@@ -1,0 +1,30 @@
+<app-listar-generico [listado]="peliculas">
+    <ng-container contenido>
+
+        <div class="peliculas-contenedor">
+            <div *ngFor="let item of peliculas; let i = index" class="pelicula-contenedor">
+                <a>
+                    <img [src]="item.imagen" alt="Poster">
+                </a>
+                <p>
+                    <a>{{item.titulo}}</a>
+                </p>
+                <div>
+                    <a mat-flat-button color="primary">Editar</a>
+                    <button mat-flat-button color="warn" type="button"> Borrar </button>
+                </div>
+            </div>
+            <!-- 
+        <div *ngFor="let item of peliculas; let i = index" class="peliculas">
+            <ul>
+                <p>Película # {{i+1}}</p>
+                <li>{{item.titulo}} <button style="margin-left: 1rem;" (click)="remover(i);"> Remover</button></li>
+                <li>{{item.anio | date: "mediumDate"}}</li>
+                <li>{{item.precio | currency}}</li>
+            </ul>
+        </div>
+        -->
+
+        </div>
+    </ng-container>
+</app-listar-generico>

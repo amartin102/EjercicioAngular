@@ -1,0 +1,25 @@
+
+<div class="contenedor-peliculas">
+    <!--<div>
+   <div>
+       <input type="text" (keyup)="getValueText($event)"> 
+   </div>
+   
+       <input type="checkbox" checked (change)="ocultar = !ocultar"> Ocultar
+   </div>
+   <div *ngIf="ocultar">
+   -->
+   
+       <!--<app-rating (rated)="ratedSelected($event)"></app-rating>-->
+       <h3>{{title1 | uppercase}}</h3>
+   
+       <app-listar [peliculas] = "peliculasencartelera"></app-listar>
+       
+       <hr/>
+       <h3>{{title2 | uppercase}}</h3>
+       
+       <app-listar [peliculas] = "peliculasproximosestrenos"></app-listar>
+   <!--</div>  -->
+   </div>
+   
+   
